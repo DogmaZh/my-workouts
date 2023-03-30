@@ -1,13 +1,15 @@
 <template>
-  <div class="home">
-    <div class="mx-auto flex items-center justify-center">Homepage</div>
-    <Icon name="mdi:close" />
-    <nav>
-      <ol>
-        <li>
-          <nuxt-link to="/"></nuxt-link>
-        </li>
-      </ol>
-    </nav>
+  <div
+    class="flex h-full w-full items-center justify-center text-4xl font-bold"
+  >
+    <select v-model="locale">
+      <option value="en">en</option>
+      <option value="ru">ru</option>
+    </select>
+    {{ t("common.hello") }}
   </div>
 </template>
+
+<script setup lang="ts">
+const { t, locale } = useI18n();
+</script>
