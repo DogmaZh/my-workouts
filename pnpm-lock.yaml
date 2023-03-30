@@ -7,6 +7,9 @@ dependencies:
   '@vite-pwa/nuxt':
     specifier: ^0.0.7
     version: 0.0.7(@nuxt/kit@3.3.2)(vite-plugin-pwa@0.14.7)
+  nuxt-headlessui:
+    specifier: ^1.1.1
+    version: 1.1.1(rollup@2.79.1)(vue@3.2.47)
   pinia:
     specifier: ^2.0.33
     version: 2.0.33(typescript@5.0.2)(vue@3.2.47)
@@ -1530,6 +1533,15 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
+  /@headlessui/vue@1.7.12(vue@3.2.47):
+    resolution: {integrity: sha512-IV0k1I2I8Bj37HljFF231Y9cpldfiucf+inMCxA/VPoQT6UTxo0N/rb78CrogBxXNfsPxKmz3y/nlv+eRz6zvg==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      vue: 3.2.47
+    dev: false
+
   /@humanwhocodes/config-array@0.11.8:
     resolution: {integrity: sha512-UybHIJzJnR5Qc/MsD9Kr+RpO2h+/P1GhOwdiLPXK5TWk5sgTdu88bTD9UP+CKbPPh5Rni1u0GjAdYQLemG8g+g==}
     engines: {node: '>=10.10.0'}
@@ -2403,7 +2415,7 @@ packages:
     resolution: {integrity: sha512-9K4zoImiZc3HlIp6AVUDE4CWYx22a+lhSZMYNpbjW04+YF0KWj4pJXnEMjdnFTiQibFFmElcsasJXDbdI/EPhA==}
     dependencies:
       '@types/eslint': 8.37.0
-      '@types/estree': 0.0.51
+      '@types/estree': 1.0.0
     dev: true
 
   /@types/eslint@8.37.0:
@@ -6550,6 +6562,18 @@ packages:
       - rollup
       - supports-color
     dev: true
+
+  /nuxt-headlessui@1.1.1(rollup@2.79.1)(vue@3.2.47):
+    resolution: {integrity: sha512-sf8qZQvGDaI+uNnKuynFGY+VXScDNEj3W0LMjv2XH4jO4ksQzbliCB9Hl5cdd/VIFPVmnZm+dnneURSI4/1fXw==}
+    dependencies:
+      '@headlessui/vue': 1.7.12(vue@3.2.47)
+      '@nuxt/kit': 3.3.2(rollup@2.79.1)
+      pathe: 1.1.0
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+      - vue
+    dev: false
 
   /nuxt-icon@0.3.3(rollup@2.79.1)(vue@3.2.47):
     resolution: {integrity: sha512-KdhJAigBGTP8/YIFZ3orwetk40AgLq6VQ5HRYuDLmv5hiDptor9Ro+WIdZggHw7nciRxZvDdQkEwi9B5G/jrkQ==}

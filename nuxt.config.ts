@@ -40,10 +40,30 @@ export default defineNuxtConfig({
     },
     workbox: {
       navigateFallback: "/",
+      globPatterns: ["**/*.{js,css,html,png,svg,ico}"],
     },
     devOptions: {
       enabled: true,
       type: "module",
+    },
+  },
+  app: {
+    head: {
+      viewport: "width=device-width,initial-scale=1,viewport-fit=cover",
+      title: "My Workouts",
+      bodyAttrs: {
+        class: "overflow-x-hidden",
+      },
+      link: [
+        { rel: "icon", href: "/favicon.ico", sizes: "any" },
+        { rel: "icon", type: "image/svg+xml", href: "/logo.svg" },
+        { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
+      ],
+      meta: [
+        { property: "og:title", content: "My Workouts" },
+        { property: "og:description", content: "Workouts app for homies" },
+        { property: "og:type", content: "website" },
+      ],
     },
   },
 });

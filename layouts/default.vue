@@ -1,5 +1,6 @@
 <template>
-  <div class="h-full">
+  <div class="flex h-full flex-col">
+    <layout-header />
     <VitePwaManifest />
     <main class="h-full">
       <slot />
